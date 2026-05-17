@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>من نحن - About Us</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts - Arabic Support -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            font-family: 'Cairo', sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            color: #333;
+        }
+        
+        /* Navbar Styling */
+        .navbar {
+            background: linear-gradient(90deg, #1e3c72 0%, #2a5298 100%) !important;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            padding: 1rem 0;
+        }
+        
+        .navbar-brand {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: #fff !important;
+        }
+        
+        .nav-link {
+            color: #fff !important;
+            margin: 0 1rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border-bottom: 3px solid transparent;
+        }
+        
+        .nav-link:hover {
+            color: #ffc107 !important;
+            border-bottom: 3px solid #ffc107;
+            transform: translateY(-2px);
+        }
+        
+        /* Page Header */
+        .page-header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: #fff;
+            padding: 80px 0;
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .page-header h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+        }
+        
+        .page-header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        /* About Content */
+        .about-section {
+            background: #fff;
+            padding: 60px 0;
+            margin-bottom: 60px;
+            border-radius: 15px;
+        }
+        
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #1e3c72;
+            margin-bottom: 2rem;
+        }
+        
+        .about-text {
+            font-size: 1.1rem;
+            line-height: 2;
+            color: #555;
+            margin-bottom: 1.5rem;
+        }
+        
+        .highlight-text {
+            color: #2a5298;
+            font-weight: 700;
+        }
+        
+        /* Team Section */
+        .team-section {
+            background: linear-gradient(135deg, #1e3c7215 0%, #2a529815 100%);
+            padding: 80px 0;
+            margin-bottom: 60px;
+        }
+        
+        .team-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #1e3c72;
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+        
+        .team-member-card {
+            background: #fff;
+            border-radius: 15px;
+            text-align: center;
+            padding: 30px;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+        
+        .team-member-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(30, 60, 114, 0.3);
+        }
+        
+        .member-image {
+            width: 150px;
+            height: 150px;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            color: #fff;
+        }
+        
+        .member-name {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #1e3c72;
+            margin-bottom: 0.5rem;
+        }
+        
+        .member-position {
+            color: #ffc107;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        
+        .member-bio {
+            color: #666;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+        
+        /* Values Section */
+        .values-section {
+            background: #fff;
+            padding: 80px 0;
+            margin-bottom: 60px;
+        }
+        
+        .values-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #1e3c72;
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+        
+        .value-card {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            transition: all 0.3s ease;
+            margin-bottom: 30px;
+        }
+        
+        .value-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(30, 60, 114, 0.2);
+        }
+        
+        .value-icon {
+            font-size: 3.5rem;
+            color: #2a5298;
+            margin-bottom: 1rem;
+        }
+        
+        .value-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #1e3c72;
+            margin-bottom: 1rem;
+        }
+        
+        .value-desc {
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        /* Statistics */
+        .stats-section {
+            background: linear-gradient(90deg, #1e3c72 0%, #2a5298 100%);
+            color: #fff;
+            padding: 60px 0;
+            margin-bottom: 60px;
+            text-align: center;
+        }
+        
+        .stat-item {
+            padding: 20px;
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #ffc107;
+        }
+        
+        .stat-label {
+            font-size: 1rem;
+            margin-top: 0.5rem;
+        }
+        
+        /* Contact Section */
+        .contact-section {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: #fff;
+            padding: 60px 0;
+            text-align: center;
+            margin-bottom: 60px;
+            border-radius: 15px;
+        }
+        
+        .contact-title {
+            font-size: 2.2rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+        }
+        
+        .contact-text {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+        
+        .btn-contact {
+            padding: 12px 40px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            border-radius: 50px;
+            background: linear-gradient(90deg, #ffc107 0%, #ffed4e 100%);
+            color: #333;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: none;
+            display: inline-block;
+        }
+        
+        .btn-contact:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(255, 193, 7, 0.3);
+            color: #333;
+        }
+        
+        /* Footer */
+        .footer {
+            background: #0d1b2a;
+            color: #fff;
+            padding: 40px 0;
+            text-align: center;
+        }
+        
+        .footer p {
+            margin: 0.5rem 0;
+        }
+        
+        .social-links {
+            margin: 1rem 0;
+        }
+        
+        .social-links a {
+            color: #2a5298;
+            margin: 0 10px;
+            font-size: 1.5rem;
+            transition: all 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            color: #ffc107;
+            transform: scale(1.2);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container-fluid px-4">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-book"></i> منصة القصص المشهورة
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">الرئيسية</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="project.html">المشاريع الهندسية</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">من نحن</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>من نحن</h1>
+            <p>نحكي قصصنا ورحلتنا نحو الابتكار والتميز</p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section">
+        <div class="container">
+            <h2 class="section-title">عن منصة القصص المشهورة</h2>
+            <p class="about-text">
+                منصة القصص المشهورة هي <span class="highlight-text">مشروع طلابي متطور</span> يهدف إلى توفير مكان آمن وسهل الاستخدام لعشاق القراءة والأدب. تأسست في عام 2026 بواسطة طلاب متخصصين في <span class="highlight-text">تكنولوجيا المعلومات</span>.
+            </p>
+            <p class="about-text">
+                تضم المنصة مكتبة ضخمة من القصص والروايات العالمية المشهورة، مع توفير وسائل تفاعلية للقراء لمشاركة آرائهم وتقييماتهم. نؤمن بأن <span class="highlight-text">القراءة هي طريق إلى عالم لا محدود</span> من المعرفة والخيال.
+            </p>
+            <p class="about-text">
+                بفريق من الطلاب المتحمسين والموهوبين، نعمل بجد لتحسين وتطوير المنصة يومياً، مستخدمين أحدث التقنيات والممارسات الاحترافية في تطوير الويب والذكاء الاصطناعي.
+            </p>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team-section">
+        <div class="container">
+            <h2 class="team-title">فريقنا الرائع</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="team-member-card">
+                        <div class="member-image">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <h4 class="member-name">أحمد محمد</h4>
+                        <p class="member-position">مدير المشروع</p>
+                        <p class="member-bio">متخصص في إدارة المشاريع وتنسيق الفريق، مع خبرة في البرمجيات الكبيرة.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="team-member-card">
+                        <div class="member-image">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <h4 class="member-name">فاطمة علي</h4>
+                        <p class="member-position">مهندسة البرمجيات</p>
+                        <p class="member-bio">تخصصت في تطوير الواجهات الأمامية والتصاميم التفاعلية الحديثة.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="team-member-card">
+                        <div class="member-image">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <h4 class="member-name">محمود سالم</h4>
+                        <p class="member-position">مهندس قواعد البيانات</p>
+                        <p class="member-bio">متخصص في تصميم قواعد البيانات الضخمة وتحسين الأداء.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="team-member-card">
+                        <div class="member-image">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <h4 class="member-name">ليلى حسن</h4>
+                        <p class="member-position">مهندسة الذكاء الاصطناعي</p>
+                        <p class="member-bio">خبيرة في التعلم الآلي وتطوير أنظمة التوصيات الذكية.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="team-member-card">
+                        <div class="member-image">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <h4 class="member-name">عمر خالد</h4>
+                        <p class="member-position">مهندس الأمان السيبراني</p>
+                        <p class="member-bio">مسؤول عن حماية البيانات والتأكد من سلامة النظام.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="team-member-card">
+                        <div class="member-image">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <h4 class="member-name">رنا أحمد</h4>
+                        <p class="member-position">مديرة التسويق الرقمي</p>
+                        <p class="member-bio">تعمل على نشر المنصة وجذب المستخدمين الجدد.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="values-section">
+        <div class="container">
+            <h2 class="values-title">قيمنا الأساسية</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <h4 class="value-title">الابتكار</h4>
+                        <p class="value-desc">نسعى دائماً لتقديم حلول جديدة ومبتكرة تلبي احتياجات المستخدمين.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h4 class="value-title">الجودة</h4>
+                        <p class="value-desc">نركز على جودة العمل في كل تفاصيل المشروع دون استثناء.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h4 class="value-title">التعاون</h4>
+                        <p class="value-desc">نعمل كفريق واحد متحد نحو هدف واحد مشترك.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 stat-item">
+                    <div class="stat-number">6</div>
+                    <div class="stat-label">أعضاء الفريق</div>
+                </div>
+                <div class="col-md-3 stat-item">
+                    <div class="stat-number">4</div>
+                    <div class="stat-label">مشاريع متطورة</div>
+                </div>
+                <div class="col-md-3 stat-item">
+                    <div class="stat-number">500+</div>
+                    <div class="stat-label">قصة في المكتبة</div>
+                </div>
+                <div class="col-md-3 stat-item">
+                    <div class="stat-number">150K+</div>
+                    <div class="stat-label">مستخدم نشط</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <h2 class="contact-title">تواصل معنا</h2>
+            <p class="contact-text">هل لديك أسئلة أو اقتراحات؟ نحب أن نسمع منك!</p>
+            <a href="mailto:info@storiesplatform.com" class="btn-contact">ابدأ المراسلة</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <h5>منصة القصص المشهورة</h5>
+            <p>&copy; 2026 جميع الحقوق محفوظة</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+            <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.7;">مشروع جامعي - قسم تكنولوجيا المعلومات</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

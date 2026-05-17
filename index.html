@@ -1,0 +1,856 @@
+﻿Set-Location -Path 'c:\Users\USER_1\Desktop\University_project'; $index = @'
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alix18 - الرئيسية</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            color-scheme: dark;
+            --bg: #171a21;
+            --nav: #1b2838;
+            --card: rgba(27, 40, 56, 0.96);
+            --card-light: #20324a;
+            --text: #ffffff;
+            --text-soft: #d8d8e0;
+            --accent: #3ea7ff;
+            --accent-hover: #6ab8ff;
+            --border: rgba(255,255,255,0.08);
+        }
+        * {
+            font-family: 'Cairo', sans-serif;
+            color: var(--text);
+        }
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+        }
+        .top-note {
+            background: #111821;
+            color: var(--text-soft);
+            font-size: 0.92rem;
+            padding: 0.35rem 0;
+            text-align: center;
+        }
+        .navbar {
+            background-color: var(--nav) !important;
+        }
+        .navbar-brand {
+            color: var(--text) !important;
+            font-weight: 800;
+        }
+        .nav-link {
+            color: var(--text-soft) !important;
+            transition: color 0.25s ease;
+            font-weight: 600;
+        }
+        .nav-link:hover, .nav-link.active {
+            color: var(--accent) !important;
+        }
+        .hero {
+            background: radial-gradient(circle at top left, rgba(62, 167, 255, 0.18), transparent 30%),
+                        linear-gradient(180deg, #111821 0%, #171a21 100%);
+            padding: 100px 0 70px;
+        }
+        .hero h1 {
+            font-size: clamp(2.75rem, 5vw, 4.5rem);
+            font-weight: 800;
+            letter-spacing: 0.03em;
+        }
+        .hero p {
+            color: var(--text-soft);
+            font-size: 1.05rem;
+            max-width: 760px;
+        }
+        .btn-accent {
+            background: linear-gradient(135deg, var(--accent), #6cc5ff);
+            border: none;
+            box-shadow: 0 18px 40px rgba(62, 167, 255, 0.22);
+            color: var(--text);
+        }
+        .btn-accent:hover {
+            background: linear-gradient(135deg, #72b5ff, var(--accent-hover));
+            color: var(--text);
+        }
+        .feature-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 1.25rem;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+        .feature-card:hover {
+            transform: translateY(-8px);
+            border-color: rgba(62, 167, 255, 0.28);
+        }
+        .feature-card img {
+            height: 260px;
+            object-fit: cover;
+        }
+        .feature-card .card-body {
+            padding: 1.5rem;
+        }
+        .feature-card .btn {
+            background: var(--accent);
+            border: none;
+        }
+        .feature-card .btn:hover {
+            background: var(--accent-hover);
+        }
+        .section-title {
+            color: var(--text);
+            font-weight: 800;
+        }
+        .section-text {
+            color: var(--text-soft);
+        }
+        .hero-badges span {
+            background: rgba(62, 167, 255, 0.12);
+            color: var(--accent);
+            padding: 0.5rem 1rem;
+            border-radius: 999px;
+            font-weight: 700;
+            margin-left: 0.5rem;
+        }
+        .footer {
+            background: #111821;
+            padding: 2rem 0;
+            border-top: 1px solid var(--border);
+        }
+        .footer a {
+            color: var(--text-soft);
+            text-decoration: none;
+        }
+        .footer a:hover {
+            color: var(--accent);
+        }
+        .badge-light {
+            background: rgba(255,255,255,0.08);
+            color: var(--text);
+        }
+        @media (max-width: 767px) {
+            .hero {
+                padding: 70px 0 50px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="top-note">made by ali rezaq information technology</div>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">🎮 Alix18</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="تبديل التنقل">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">الرئيسية</a></li>
+                    <li class="nav-item"><a class="nav-link" href="project.html">متجر الألعاب</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">حول المنصة</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="container">
+            <div class="row align-items-center gy-5">
+                <div class="col-lg-6 text-center text-lg-end">
+                    <div class="hero-badges mb-4">
+                        <span>Dark Theme</span>
+                        <span>ألعاب أصلية</span>
+                    </div>
+                    <h1>Alix18 - منصة الألعاب الرقمية التي تشبه ستيم</h1>
+                    <p class="section-text mt-4">منصة عربية متكاملة بتصميم كحلي داكن، نص أبيض واضح، وأزرار زرقاء نيون. تصفح أشهر الألعاب، حملها من مواقعها الرسمية، واستمتع بتجربة لعبة احترافية.</p>
+                    <div class="mt-5 d-flex justify-content-center justify-content-lg-end gap-3 flex-wrap">
+                        <a href="project.html" class="btn btn-accent btn-lg">تصفح الألعاب</a>
+                        <a href="about.html" class="btn btn-outline-light btn-lg">عن Alix18</a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="row g-4">
+                        <div class="col-12">
+                            <div class="feature-card shadow-sm overflow-hidden">
+                                <img src="https://upload.wikimedia.org/wikipedia/en/7/7c/Elden_Ring_cover.jpg" alt="Elden Ring" class="img-fluid w-100">
+                                <div class="card-body">
+                                    <h5 class="card-title">Elden Ring</h5>
+                                    <p class="section-text">لعبة أكشن وحوش مفتوحة العالم من مطوري Dark Souls، بأجواء داكنة وسرد أسطوري.</p>
+                                    <a href="https://en.bandainamcoent.com/games/elden-ring" target="_blank" class="btn btn-accent">تحميل رسمي</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="feature-card shadow-sm overflow-hidden">
+                                <img src="https://upload.wikimedia.org/wikipedia/en/4/44/Bloodborne_cover.jpg" alt="Bloodborne" class="img-fluid w-100">
+                                <div class="card-body">
+                                    <h5 class="card-title">Bloodborne</h5>
+                                    <p class="section-text">رعب قاتم وقتال سريع يزيد مستوى التحدي عند كل مواجهة.</p>
+                                    <a href="https://www.playstation.com/en-us/games/bloodborne/" target="_blank" class="btn btn-accent">تحميل رسمي</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="feature-card shadow-sm overflow-hidden">
+                                <img src="https://upload.wikimedia.org/wikipedia/en/3/32/Doom_Eternal_cover_art.jpg" alt="Doom Eternal" class="img-fluid w-100">
+                                <div class="card-body">
+                                    <h5 class="card-title">Doom Eternal</h5>
+                                    <p class="section-text">شوتر سريع وغامق مع تأثيرات ألوان نيون تعبر عن قوة المنصة.</p>
+                                    <a href="https://bethesda.net/en/game/doom" target="_blank" class="btn btn-accent">تحميل رسمي</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="py-5">
+        <div class="container">
+            <div class="row align-items-center mb-5">
+                <div class="col-lg-8">
+                    <h2 class="section-title">ألعاب مختارة</h2>
+                    <p class="section-text">ثلاثة ألعاب مشهورة تم اختيارها بعناية لتظهر التناسق بين التصميم الداكن والإضاءة الزرقاء الساطعة.</p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-xl-4">
+                    <div class="card feature-card h-100">
+                        <img src="https://upload.wikimedia.org/wikipedia/en/f/f7/Resident_Evil_Village_cover_art.jpg" class="card-img-top" alt="Resident Evil Village">
+                        <div class="card-body">
+                            <h5 class="card-title">Resident Evil Village</h5>
+                            <p class="section-text">لعبة رعب ناجحة مع قصة مظلمة ووحوش مخيفة داخل عالم تحكمه الظلال.</p>
+                            <a href="https://www.residentevil.com/village/" target="_blank" class="btn btn-accent w-100">تحميل رسمي</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-xl-4">
+                    <div class="card feature-card h-100">
+                        <img src="https://upload.wikimedia.org/wikipedia/en/5/5c/Call_of_Duty_Modern_Warfare_III_cover_art.jpg" class="card-img-top" alt="Call of Duty Modern Warfare III">
+                        <div class="card-body">
+                            <h5 class="card-title">Call of Duty: MW3</h5>
+                            <p class="section-text">شوتر حديث مع رسومات قوية وحرب إلكترونية مثيرة.</p>
+                            <a href="https://www.callofduty.com/modernwarfare3" target="_blank" class="btn btn-accent w-100">تحميل رسمي</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-xl-4">
+                    <div class="card feature-card h-100">
+                        <img src="https://upload.wikimedia.org/wikipedia/en/7/7c/Elden_Ring_cover.jpg" class="card-img-top" alt="Elden Ring">
+                        <div class="card-body">
+                            <h5 class="card-title">Elden Ring</h5>
+                            <p class="section-text">تجربة أكشن-آر بي جي عميقة، مع عالم مفتوح ومغامرات ملحمية.</p>
+                            <a href="https://en.bandainamcoent.com/games/elden-ring" target="_blank" class="btn btn-accent w-100">تحميل رسمي</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer text-center text-white-50">
+        <div class="container">
+            <p class="mb-2">© 2026 Alix18. جميع الحقوق محفوظة.</p>
+            <div class="d-flex justify-content-center gap-3 flex-wrap">
+                <a href="index.html">الرئيسية</a>
+                <a href="project.html">متجر الألعاب</a>
+                <a href="about.html">حول المنصة</a>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+'@; $project = @'
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>متجر الألعاب - Alix18</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            color-scheme: dark;
+            --bg: #171a21;
+            --nav: #1b2838;
+            --card: rgba(27, 40, 56, 0.96);
+            --text: #ffffff;
+            --text-soft: #d8d8e0;
+            --accent: #3ea7ff;
+            --accent-hover: #6ab8ff;
+            --border: rgba(255,255,255,0.08);
+        }
+        * { font-family: 'Cairo', sans-serif; color: var(--text); }
+        body { background-color: var(--bg); }
+        .top-note { background: #111821; color: var(--text-soft); font-size: 0.92rem; padding: 0.35rem 0; text-align: center; }
+        .navbar { background-color: var(--nav) !important; }
+        .navbar-brand { color: var(--text) !important; font-weight: 800; }
+        .nav-link { color: var(--text-soft) !important; font-weight: 600; }
+        .nav-link:hover, .nav-link.active { color: var(--accent) !important; }
+        .page-header { background: linear-gradient(180deg, rgba(62,167,255,0.10) 0%, #111821 45%, #171a21 100%); padding: 80px 0; }
+        .page-header h1 { font-size: clamp(2.75rem, 5vw, 4rem); font-weight: 800; }
+        .page-header p { color: var(--text-soft); font-size: 1.05rem; max-width: 760px; }
+        .search-panel { background: rgba(27, 40, 56, 0.98); border: 1px solid var(--border); border-radius: 1.5rem; padding: 1.5rem; }
+        .search-panel input,
+        .search-panel select { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: var(--text); }
+        .search-panel input::placeholder { color: var(--text-soft); }
+        .game-card { background: var(--card); border: 1px solid var(--border); border-radius: 1.5rem; overflow: hidden; transition: transform 0.3s ease, border-color 0.3s ease; }
+        .game-card:hover { transform: translateY(-8px); border-color: rgba(62, 167, 255, 0.28); }
+        .game-card img { height: 180px; object-fit: cover; }
+        .game-card .card-body { padding: 1.3rem; }
+        .game-card .btn-download { background: linear-gradient(135deg, var(--accent), #6cc5ff); border: none; color: var(--text); }
+        .game-card .btn-download:hover { background: linear-gradient(135deg, #72b5ff, var(--accent-hover)); }
+        .category-badge { background: rgba(62, 167, 255, 0.12); color: var(--accent); font-weight: 700; }
+        .footer { background: #111821; padding: 2rem 0; border-top: 1px solid var(--border); }
+        .footer a { color: var(--text-soft); text-decoration: none; }
+        .footer a:hover { color: var(--accent); }
+        .section-title { color: var(--text); font-weight: 800; }
+        .section-text { color: var(--text-soft); }
+        @media (max-width: 767px) { .page-header { padding: 60px 0; } }
+    </style>
+</head>
+<body>
+    <div class="top-note">made by ali rezaq information technology</div>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">🎮 Alix18</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="تبديل التنقل">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">الرئيسية</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="project.html">متجر الألعاب</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">حول المنصة</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <div class="container">
+            <div class="row align-items-center gy-4">
+                <div class="col-lg-7 text-center text-lg-end">
+                    <h1>متجر ألعاب Alix18 - أكثر من 50 لعبة مشهورة وجاهزة للتحميل</h1>
+                    <p class="section-text mt-4">كل لعبة تحتوي على صورة أصلية ورابط تحميل من الموقع الرسمي أو صفحة العرض الرسمية الخاصة بها.</p>
+                </div>
+                <div class="col-lg-5">
+                    <div class="search-panel">
+                        <h5 class="mb-4">بحث سريع</h5>
+                        <form class="row g-3">
+                            <div class="col-12">
+                                <input type="text" class="form-control form-control-lg text-white" placeholder="ابحث باسم اللعبة أو التصنيف">
+                            </div>
+                            <div class="col-md-6">
+                                <select class="form-select text-white">
+                                    <option selected>كل التصنيفات</option>
+                                    <option>أكشن</option>
+                                    <option>شوتر</option>
+                                    <option>رعب</option>
+                                    <option>استراتيجية</option>
+                                    <option>سباقات</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6 d-grid">
+                                <button type="submit" class="btn btn-download btn-lg">ابحث الآن</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="py-5">
+        <div class="container">
+            <div class="row mb-4">
+                <div class="col-lg-8">
+                    <h2 class="section-title">تصفح أفضل الألعاب</h2>
+                    <p class="section-text">قائمة تضم أكثر من خمسين لعبة شهيرة تشمل أكشن، شوتر، رعب، وألعاب مغامرات مع روابط تحميل رسمية.</p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-xl-4">
+                    <div class="card game-card h-100">
+                        <img src="https://upload.wikimedia.org/wikipedia/en/7/7c/Elden_Ring_cover.jpg" alt="Elden Ring" class="card-img-top">
+                        <div class="card-body">
+                            <span class="badge category-badge mb-2">أكشن آر بي جي</span>
+                            <h5 class="card-title">Elden Ring</h5>
+                            <p class="section-text">عالم مفتوح ضخم وتجربة قتالية متقدمة من فريق FromSoftware.</p>
+                        </div>
+                        <div class="card-footer bg-transparent border-top border-white border-opacity-10">
+                            <a href="https://en.bandainamcoent.com/games/elden-ring" target="_blank" class="btn btn-download w-100">تحميل رسمي</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-xl-4">
+                    <div class="card game-card h-100">
+                        <img src="https://upload.wikimedia.org/wikipedia/en/4/44/Bloodborne_cover.jpg" alt="Bloodborne" class="card-img-top">
+                        <div class="card-body">
+                            <span class="badge category-badge mb-2">رعب أكشن</span>
+                            <h5 class="card-title">Bloodborne</h5>
+                            <p class="section-text">مغامرة رعب قوطية بأجواء قاتمة وتحكم دقيق.</p>
+                        </div>
+                        <div class="card-footer bg-transparent border-top border-white border-opacity-10">
+                            <a href="https://www.playstation.com/en-us/games/bloodborne/" target="_blank" class="btn btn-download w-100">تحميل رسمي</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-xl-4">
+                    <div class="card game-card h-100">
+                        <img src="https://upload.wikimedia.org/wikipedia/en/3/32/Doom_Eternal_cover_art.jpg" alt="Doom Eternal" class="card-img-top">
+                        <div class="card-body">
+                            <span class="badge category-badge mb-2">شوتر</span>
+                            <h5 class="card-title">Doom Eternal</h5>
+                            <p class="section-text">أكشن سريع ومؤثرات نيون مع تصميم مظلم قوي.</p>
+                        </div>
+                        <div class="card-footer bg-transparent border-top border-white border-opacity-10">
+                            <a href="https://bethesda.net/en/game/doom" target="_blank" class="btn btn-download w-100">تحميل رسمي</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-xl-4">
+                    <div class="card game-card h-100">
+                        <img src="https://upload.wikimedia.org/wikipedia/en/5/5c/Call_of_Duty_Modern_Warfare_III_cover_art.jpg" alt="Call of Duty Modern Warfare III" class="card-img-top">
+                        <div class="card-body">
+                            <span class="badge category-badge mb-2">شوتر</span>
+                            <h5 class="card-title">Call of Duty: MW3</h5>
+                            <p class="section-text">إطلاق نار مع حملة حديثة وتجربة تنافسية قوية.</p>
+                        </div>
+                        <div class="card-footer bg-transparent border-top border-white border-opacity-10">
+                            <a href="https://www.callofduty.com/modernwarfare3" target="_blank" class="btn btn-download w-100">تحميل رسمي</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-xl-4">
+                    <div class="card game-card h-100">
+                        <img src="https://upload.wikimedia.org/wikipedia/en/f/f7/Resident_Evil_Village_cover_art.jpg" alt="Resident Evil Village" class="card-img-top">
+                        <div class="card-body">
+                            <span class="badge category-badge mb-2">رعب</span>
+                            <h5 class="card-title">Resident Evil Village</h5>
+                            <p class="section-text">رعب حديث مع قصة قوية وأعداء مخيفين.</p>
+                        </div>
+                        <div class="card-footer bg-transparent border-top border-white border-opacity-10">
+                            <a href="https://www.residentevil.com/village/" target="_blank" class="btn btn-download w-100">تحميل رسمي</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-xl-4">
+                    <div class="card game-card h-100">
+                        <img src="https://upload.wikimedia.org/wikipedia/en/2/23/Dark_Souls_Cover_Art.jpg" alt="Dark Souls" class="card-img-top">
+                        <div class="card-body">
+                            <span class="badge category-badge mb-2">سولز</span>
+                            <h5 class="card-title">Dark Souls</h5>
+                            <p class="section-text">كلاسيكيات الصعوبة والقصة الغامضة في عالم مظلم.</p>
+                        </div>
+                        <div class="card-footer bg-transparent border-top border-white border-opacity-10">
+                            <a href="https://www.bandainamcoent.com/games/dark-souls" target="_blank" class="btn btn-download w-100">تحميل رسمي</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-xl-4">
+                    <div class="card game-card h-100">
+                        <img src="https://upload.wikimedia.org/wikipedia/en/1/1d/Dark_Souls_III_cover_art.jpg" alt="Dark Souls III" class="card-img-top">
+                        <div class="card-body">
+                            <span class="badge category-badge mb-2">سولز</span>
+                            <h5 class="card-title">Dark Souls III</h5>
+                            <p class="section-text">ختام قوي لسلسلة سولز مع معارك ملحمية.</p>
+                        </div>
+                        <div class="card-footer bg-transparent border-top border-white border-opacity-10">
+                            <a href="https://en.bandainamcoent.com/games/dark-souls-iii" target="_blank" class="btn btn-download w-100">تحميل رسمي</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-xl-4">
+                    <div class="card game-card h-100">
+                        <img src="https://upload.wikimedia.org/wikipedia/en/6/6b/Dark_Souls_2_cover_art.jpg" alt="Dark Souls II" class="card-img-top">
+                        <div class="card-body">
+                            <span class="badge category-badge mb-2">سولز</span>
+                            <h5 class="card-title">Dark Souls II</h5>
+                            <p class="section-text">استمرارية سولز مع خرائط أوسع وتعقيد أكبر.</p>
+                        </div>
+                        <div class="card-footer bg-transparent border-top border-white border-opacity-10">
+                            <a href="https://www.nintendo.com/store/products/dark-souls-ii-scholar-of-the-first-sin-switch/" target="_blank" class="btn btn-download w-100">تحميل رسمي</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-xl-4">
+                    <div class="card game-card h-100">
+                        <img src="https://upload.wikimedia.org/wikipedia/en/0/01/Sekiro_cover_art.png" alt="Sekiro" class="card-img-top">
+                        <div class="card-body">
+                            <span class="badge category-badge mb-2">أكشن</span>
+                            <h5 class="card-title">Sekiro: Shadows Die Twice</h5>
+                            <p class="section-text">قتال سيف سريع ومهارات متقدمة في عالم نينجا.</p>
+                        </div>
+                        <div class="card-footer bg-transparent border-top border-white border-opacity-10">
+                            <a href="https://www.sekirothegame.com/" target="_blank" class="btn btn-download w-100">تحميل رسمي</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-xl-4">
+                    <div class="card game-card h-100">
+                        <img src="https://upload.wikimedia.org/wikipedia/en/5/50/DemonsSoulsCover.jpg" alt="Demon's Souls" class="card-img-top">
+                        <div class="card-body">
+                            <span class="badge category-badge mb-2">سولز</span>
+                            <h5 class="card-title">Demon's Souls</h5>
+                            <p class="section-text">بداية عالم سولز الأصلي، تجربة تحدي لا تنسى.</p>
+                        </div>
+                        <div class="card-footer bg-transparent border-top border-white border-opacity-10">
+                            <a href="https://www.playstation.com/en-us/games/demons-souls/" target="_blank" class="btn btn-download w-100">تحميل رسمي</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-xl-4">
+                    <div class="card game-card h-100">
+                        <img src="https://upload.wikimedia.org/wikipedia/en/4/46/Nioh_cover.jpg" alt="Nioh" class="card-img-top">
+                        <div class="card-body">
+                            <span class="badge category-badge mb-2">أكشن</span>
+                            <h5 class="card-title">Nioh</h5>
+                            <p class="section-text">قتال ياباني تقليدي ودقة عالية في بناء الشخصية.</p>
+                        </div>
+                        <div class="card-footer bg-transparent border-top border-white border-opacity-10">
+                            <a href="https://www.teamninja-studio.com/nioh/" target="_blank" class="btn btn-download w-100">تحميل رسمي</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-xl-4">
+                    <div class="card game-card h-100">
+                        <img src="https://upload.wikimedia.org/wikipedia/en/7/7f/Nioh_2_cover_art.jpg" alt="Nioh 2" class="card-img-top">
+                        <div class="card-body">
+                            <span class="badge category-badge mb-2">أكشن</span>
+                            <h5 class="card-title">Nioh 2</h5>
+                            <p class="section-text">أساليب قتالية متطورة وتخصيص شخصية عميق.</p>
+                        </div>
+                        <div class="card-footer bg-transparent border-top border-white border-opacity-10">
+                            <a href="https://www.teamninja-studio.com/nioh2/" target="_blank" class="btn btn-download w-100">تحميل رسمي</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-xl-4">
+                    <div class="card game-card h-100">
+                        <img src="https://upload.wikimedia.org/wikipedia/en/3/36/Lords_of_the_Fallen_cover_art.jpg" alt="Lords of the Fallen" class="card-img-top">
+                        <div class="card-body">
+                            <span class="badge category-badge mb-2">سولز</span>
+                            <h5 class="card-title">Lords of the Fallen</h5>
+                            <p class="section-text">قصة مظلمة مع أعداء ضخام ومعارك صعبة.</p>
+                        </div>
+                        <div class="card-footer bg-transparent border-top border-white border-opacity-10">
+                            <a href="https://www.lordsofthefallen.com/" target="_blank" class="btn btn-download w-100">تحميل رسمي</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-xl-4">
+                    <div class="card game-card h-100">
+                        <img src="https://upload.wikimedia.org/wikipedia/en/4/48/Mortal_Shell_cover.jpg" alt="Mortal Shell" class="card-img-top">
+                        <div class="card-body">
+                            <span class="badge category-badge mb-2">سولز</span>
+                            <h5 class="card-title">Mortal Shell</h5>
+                            <p class="section-text">لعبة تعتمد على السيطرة على الأجساد والتكتيك الحذر.</p>
+                        </div>
+                        <div class="card-footer bg-transparent border-top border-white border-opacity-10">
+                            <a href="https://www.mortalshell.com/" target="_blank" class="btn btn-download w-100">تحميل رسمي</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-xl-4">
+                    <div class="card game-card h-100">
+                        <img src="https://upload.wikimedia.org/wikipedia/en/8/86/Salt_and_Sanctuary.jpg" alt="Salt and Sanctuary" class="card-img-top">
+                        <div class="card-body">
+                            <span class="badge category-badge mb-2">2D سولز</span>
+                            <h5 class="card-title">Salt and Sanctuary</h5>
+                            <p class="section-text">مغامرة ثنائية الأبعاد مع روح سولز قوية.</p>
+                        </div>
+                        <div class="card-footer bg-transparent border-top border-white border-opacity-10">
+                            <a href="https://www.skybound.com/games/salt-and-sanctuary" target="_blank" class="btn btn-download w-100">تحميل رسمي</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-xl-4">
+                    <div class="card game-card h-100">
+                        <img src="https://upload.wikimedia.org/wikipedia/en/1/10/Blasphemous_cover_art.jpg" alt="Blasphemous" class="card-img-top">
+                        <div class="card-body">
+                            <span class="badge category-badge mb-2">رعب</span>
+                            <h5 class="card-title">Blasphemous</h5>
+                            <p class="section-text">سولز ثنائي الأبعاد مع تفاصيل دينية مظلمة.</p>
+                        </div>
+                        <div class="card-footer bg-transparent border-top border-white border-opacity-10">
+                            <a href="https://www.team17.com/games/blasphemous/" target="_blank" class="btn btn-download w-100">تحميل رسمي</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-xl-4">
+                    <div class="card game-card h-100">
+                        <img src="https://upload.wikimedia.org/wikipedia/en/9/9b/Ashen_cover.jpg" alt="Ashen" class="card-img-top">
+                        <div class="card-body">
+                            <span class="badge category-badge mb-2">تعاوني</span>
+                            <h5 class="card-title">Ashen</h5>
+                            <p class="section-text">لعبة روح سولز مع عناصر استكشاف تعاوني شبكي.</p>
+                        </div>
+                        <div class="card-footer bg-transparent border-top border-white border-opacity-10">
+                            <a href="https://www.microsoft.com/en-us/p/ashen/" target="_blank" class="btn btn-download w-100">تحميل رسمي</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-xl-4">
+                    <div class="card game-card h-100">
+                        <img src="https://upload.wikimedia.org/wikipedia/en/4/40/The_Surge_cover.jpg" alt="The Surge" class="card-img-top">
+                        <div class="card-body">
+                            <span class="badge category-badge mb-2">خيال علمي</span>
+                            <h5 class="card-title">The Surge</h5>
+                            <p class="section-text">أكشن تقني في عالم مستقبلي مع نظام تطوير أسلحة فريد.</p>
+                        </div>
+                        <div class="card-footer bg-transparent border-top border-white border-opacity-10">
+                            <a href="https://www.focusentmt.com/en/games/the-surge/" target="_blank" class="btn btn-download w-100">تحميل رسمي</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-xl-4">
+                    <div class="card game-card h-100">
+                        <img src="https://upload.wikimedia.org/wikipedia/en/a/a5/The_Surge_2_cover_art.jpg" alt="The Surge 2" class="card-img-top">
+                        <div class="card-body">
+                            <span class="badge category-badge mb-2">شخصيات</span>
+                            <h5 class="card-title">The Surge 2</h5>
+                            <p class="section-text">توسع في عالم The Surge مع بيئات أكبر وأسلحة أكثر.</p>
+                        </div>
+                        <div class="card-footer bg-transparent border-top border-white border-opacity-10">
+                            <a href="https://www.focusentmt.com/en/games/the-surge-2/" target="_blank" class="btn btn-download w-100">تحميل رسمي</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-xl-4">
+                    <div class="card game-card h-100">
+                        <img src="https://upload.wikimedia.org/wikipedia/en/9/9c/Dead_Cells_cover_art.jpg" alt="Dead Cells" class="card-img-top">
+                        <div class="card-body">
+                            <span class="badge category-badge mb-2">روجلايك</span>
+                            <h5 class="card-title">Dead Cells</h5>
+                            <p class="section-text">سولز-روجلايك مع مستويات متغيرة وتحديات سريعة.</p>
+                        </div>
+                        <div class="card-footer bg-transparent border-top border-white border-opacity-10">
+                            <a href="https://dead-cells.com/" target="_blank" class="btn btn-download w-100">تحميل رسمي</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-xl-4">
+                    <div class="card game-card h-100">
+                        <img src="https://upload.wikimedia.org/wikipedia/en/e/e5/Star_Wars_Jedi_-_Fallen_Order_cover_art.jpg" alt="Star Wars Jedi Fallen Order" class="card-img-top">
+                        <div class="card-body">
+                            <span class="badge category-badge mb-2">مغامرة</span>
+                            <h5 class="card-title">Star Wars Jedi: Fallen Order</h5>
+                            <p class="section-text">مغامرة فضائية مع سيف لايزر وقصة درامية.</p>
+                        </div>
+                        <div class="card-footer bg-transparent border-top border-white border-opacity-10">
+                            <a href="https://www.ea.com/games/starwars/jedi/jedi-fallen-order" target="_blank" class="btn btn-download w-100">تحميل رسمي</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-xl-4">
+                    <div class="card game-card h-100">
+                        <img src="https://upload.wikimedia.org/wikipedia/en/1/1a/Star_Wars_Jedi_Survivor_cover.jpg" alt="Star Wars Jedi Survivor" class="card-img-top">
+                        <div class="card-body">
+                            <span class="badge category-badge mb-2">مغامرة</span>
+                            <h5 class="card-title">Star Wars Jedi Survivor</h5>
+                            <p class="section-text">استمرار مثير لعالم Jedi مع رسومات ممتازة.</p>
+                        </div>
+                        <div class="card-footer bg-transparent border-top border-white border-opacity-10">
+                            <a href="https://www.ea.com/games/starwars/jedi/jedi-survivor" target="_blank" class="btn btn-download w-100">تحميل رسمي</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-xl-4">
+                    <div class="card game-card h-100">
+                        <img src="https://upload.wikimedia.org/wikipedia/en/4/40/Code_Vein_cover.jpg" alt="Code Vein" class="card-img-top">
+                        <div class="card-body">
+                            <span class="badge category-badge mb-2">أنمي سولز</span>
+                            <h5 class="card-title">Code Vein</h5>
+                            <p class="section-text">قتال وأسلحة متغيرة في عالم ما بعد الكارثة.</p>
+                        </div>
+                        <div class="card-footer bg-transparent border-top border-white border-opacity-10">
+                            <a href="https://www.bandainamcoent.com/games/code-vein" target="_blank" class="btn btn-download w-100">تحميل رسمي</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-xl-4">
+                    <div class="card game-card h-100">
+                        <img src="https://upload.wikimedia.org/wikipedia/en/c/c0/Resident_Evil_4_cover.jpg" alt="Resident Evil 4" class="card-img-top">
+                        <div class="card-body">
+                            <span class="badge category-badge mb-2">رعب أكشن</span>
+                            <h5 class="card-title">Resident Evil 4</h5>
+                            <p class="section-text">كلاسيكية الرعب مع إعادة إنتاج حديثة أدركت جمهورًا ضخمًا.</p>
+                        </div>
+                        <div class="card-footer bg-transparent border-top border-white border-opacity-10">
+                            <a href="https://www.residentevil.com/re4/" target="_blank" class="btn btn-download w-100">تحميل رسمي</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-xl-4">
+                    <div class="card game-card h-100">
+                        <img src="https://upload.wikimedia.org/wikipedia/en/1/10/Resident_Evil_2_Cover.png" alt="Resident Evil 2 Remake" class="card-img-top">
+                        <div class="card-body">
+                            <span class="badge category-badge mb-2">رعب</span>
+                            <h5 class="card-title">Resident Evil 2 Remake</h5>
+                            <p class="section-text">إعادة رائعة لكلاسيكية رعب البقاء مع رسومات حديثة.</p>
+                        </div>
+                        <div class="card-footer bg-transparent border-top border-white border-opacity-10">
+                            <a href="https://www.residentevil.com/re2/" target="_blank" class="btn btn-download w-100">تحميل رسمي</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-xl-4">
+                    <div class="card game-card h-100">
+                        <img src="https://upload.wikimedia.org/wikipedia/en/f/fb/Metro_Exodus_cover.jpg" alt="Metro Exodus" class="card-img-top">
+                        <div class="card-body">
+                            <span class="badge category-badge mb-2">رعب</span>
+                            <h5 class="card-title">Metro Exodus</h5>
+                            <p class="section-text">رعب ما بعد النووي مع بيئة مفتوحة وقصة درامية.</p>
+                        </div>
+                        <div class="card-footer bg-transparent border-top border-white border-opacity-10">
+                            <a href="https://www.metrothegame.com/" target="_blank" class="btn btn-download w-100">تحميل رسمي</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-xl-4">
+                    <div class="card game-card h-100">
+                        <img src="https://upload.wikimedia.org/wikipedia/en/f/f8/Alan_Wake_2_cover.jpg" alt="Alan Wake 2" class="card-img-top">
+                        <div class="card-body">
+                            <span class="badge category-badge mb-2">رعب نفسي</span>
+                            <h5 class="card-title">Alan Wake 2</h5>
+                            <p class="section-text">رعب نفسي وقصة مُركّبة في عالم مظلم مع تأثيرات سينمائية.</p>
+                        </div>
+                        <div class="card-footer bg-transparent border-top border-white border-opacity-10">
+                            <a href="https://www.alanwake.com/" target="_blank" class="btn btn-download w-100">تحميل رسمي</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-xl-4">
+                    <div class="card game-card h-100">
+                        <img src="https://upload.wikimedia.org/wikipedia/en/e/e7/Mortal_Shell_cover.jpg" alt="The Surge 2" class="card-img-top">
+                        <div class="card-body">
+                            <span class="badge category-badge mb-2">خيال علمي</span>
+                            <h5 class="card-title">Remnant II</h5>
+                            <p class="section-text">مغامرة تعاونية مع أعداء متنوعين وعالم متغير.</p>
+                        </div>
+                        <div class="card-footer bg-transparent border-top border-white border-opacity-10">
+                            <a href="https://www.remnantgame.com/" target="_blank" class="btn btn-download w-100">تحميل رسمي</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-xl-4">
+                    <div class="card game-card h-100">
+                        <img src="https://upload.wikimedia.org/wikipedia/en/4/40/The_Surge_cover.jpg" alt="Remnant From the Ashes" class="card-img-top">
+                        <div class="card-body">
+                            <span class="badge category-badge mb-2">أكشن</span>
+                            <h5 class="card-title">Remnant: From the Ashes</h5>
+                            <p class="section-text">لعبة تعاونية من نوع سومز مع روجلايك وعالم مظلم.</p>
+                        </div>
+                        <div class="card-footer bg-transparent border-top border-white border-opacity-10">
+                            <a href="https://www.remnantgame.com/" target="_blank" class="btn btn-download w-100">تحميل رسمي</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-xl-4">
+                    <div class="card game-card h-100">
+                        <img src="https://upload.wikimedia.org/wikipedia/en/8/80/Death_Stranding_cover.jpg" alt="Death Stranding" class="card-img-top">
+                        <div class="card-body">
+                            <span class="badge category-badge mb-2">مغامرة</span>
+                            <h5 class="card-title">Death Stranding</h5>
+                            <p class="section-text">عالم غريب ورحلة بقاء مع قصة فلسفية قوية.</p>
+                        </div>
+                        <div class="card-footer bg-transparent border-top border-white border-opacity-10">
+                            <a href="https://www.playstation.com/en-us/games/death-stranding/" target="_blank" class="btn btn-download w-100">تحميل رسمي</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-xl-4">
+                    <div class="card game-card h-100">
+                        <img src="https://upload.wikimedia.org/wikipedia/en/d/dc/God_of_War_Ragnarok_cover.jpg" alt="God of War Ragnarok" class="card-img-top">
+                        <div class="card-body">
+                            <span class="badge category-badge mb-2">مغامرة</span>
+                            <h5 class="card-title">God of War Ragnarök</h5>
+                            <p class="section-text">قصة أسطورية ومعارك ضخمة في عالم الشمال الأوروبي.</p>
+                        </div>
+                        <div class="card-footer bg-transparent border-top border-white border-opacity-10">
+                            <a href="https://www.playstation.com/en-us/games/god-of-war-ragnarok/" target="_blank" class="btn btn-download w-100">تحميل رسمي</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-xl-4">
+                    <div class="card game-card h-100">
+                        <img src="https://upload.wikimedia.org/wikipedia/en/2/23/Horizon_Forbidden_West_cover_art.jpg" alt="Horizon Forbidden West" class="card-img-top">
+                        <div class="card-body">
+                            <span class="badge category-badge mb-2">مغامرة</span>
+                            <h5 class="card-title">Horizon Forbidden West</h5>
+                            <p class="section-text">عالم مفتوح وإثارة في أرض مستقبلية مليئة بالوحوش الآلية.</p>
+                        </div>
+                        <div class="card-footer bg-transparent border-top border-white border-opacity-10">
+                            <a href="https://www.playstation.com/en-us/games/horizon-forbidden-west/" target="_blank" class="btn btn-download w-100">تحميل رسمي</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-xl-4">
+                    <div class="card game-card h-100">
+                        <img src="https://upload.wikimedia.org/wikipedia/en/c/c0/Cyberpunk_2077_box_art.jpg" alt="Cyberpunk 2077" class="card-img-top">
+                        <div class="card-body">
+                            <span class="badge category-badge mb-2">خيال علمي</span>
+                            <h5 class="card-title">Cyberpunk 2077</h5>
+                            <p class="section-text">مدينة مستقبلية مع أسلوب لعب حر ومهام مثيرة.</p>
+                        </div>
+                        <div class="card-footer bg-transparent border-top border-white border-opacity-10">
+                            <a href="https://www.cyberpunk.net/" target="_blank" class="btn btn-download w-100">تحميل رسمي</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-xl-4">
+                    <div class="card game-card h-100">
+                        <img src="https://upload.wikimedia.org/wikipedia/en/7/7f/Forza_Horizon_5_cover_art.jpg" alt="Forza Horizon 5" class="card-img-top">
+                        <div class="card-body">
+                            <span class="badge category-badge mb-2">سباقات</span>
+                            <h5 class="card-title">Forza Horizon 5</h5>
+                            <p class="section-text">عالم سباق مفتوح وجمال بصري مذهل.</p>
+                        </div>
+                        <div class="card-footer bg-transparent border-top border-white border-opacity-10">
+                            <a href="https://www.xbox.com/games/forza-horizon-5" target="_blank" class="btn btn-download w-100">تحميل رسمي</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-xl-4">
+                    <div class="card game-card h-100">
+                        <img src="https://upload.wikimedia.org/wikipedia/en/e/e9/Final_Fantasy_XVI_cover_art.png" alt="Final Fantasy XVI" class="card-img-top">
+                        <div class="card-body">
+                            <span class="badge category-badge mb-2">آر بي جي</span>
+                            <h5 class="card-title">Final Fantasy XVI</h5>
+                            <p class="section-text">حرب سحرية وأبطال أسطوريون مع رسومات سينمائية.</p>
+                        </div>
+                        <div class="card-footer bg-transparent border-top border-white border-opacity-10">
+                            <a href="https://finalfantasyxvi.com/" target="_blank" class="btn btn-download w-100">تحميل رسمي</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-xl-4">
+                    <div class="card game-card h-100">
+                        <img src="https://upload.wikimedia.org/wikipedia/en/2/27/Overwatch_2_cover_art.jpeg" alt="Overwatch 2" class="card-img-top">
+                        <div class="card-body">
+                            <span class="badge category-badge mb-2">شوتر</span>
+                            <h5 class="card-title">Overwatch 2</h5>
+                            <p class="section-text">أبطال متنوعون وتجربة إطلاق نار جماعية سريعة.</p>
+                        </div>
+                        <div class="card-footer bg-transparent border-top border-white border-opacity-10">
+                            <a href="https://playoverwatch.com/" target="_blank" class="btn btn-download w-100">تحميل رسمي</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-xl-4">
+                    <div class="card game-card h-100">
+                        <img src="https://upload.wikimedia.org/wikipedia/en/6/64/Valorant_cover_art.jpg" alt="Valorant" class="card-img-top">
+                        <div class="card-body">
+                            <span class="badge category-badge mb-2">تكتيكي</span>
+                            <h5 class="card-title">Valorant</h5>
+                            <p class="section-text">شوت...
